@@ -74,7 +74,7 @@ namespace Anolis.Resourcer {
 		
 		private void OptionsForm_Load(object sender, EventArgs e) {
 			
-			__legalText.Text = Anolis.Core.Resources.LegalOverview;
+			__legalText.Text = Anolis.Resources.Properties.Resources.LegalOverview;
 			
 			LoadVersion();
 			
@@ -288,7 +288,7 @@ namespace Anolis.Resourcer {
 			
 			Boolean showOverview = (Boolean)__legalToggle.Tag;
 			
-			__legalText.Text = showOverview ? Anolis.Core.Resources.LegalOverview : Anolis.Core.Resources.LegalGpl;
+			__legalText.Text = showOverview ? Anolis.Resources.Properties.Resources.LegalOverview : Anolis.Resources.Properties.Resources.LegalGpl;
 			
 			__legalToggle.Text = showOverview ? "Show GPLv2 License" : "Show License Overview";
 			

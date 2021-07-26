@@ -24,7 +24,7 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
-			this.@__menu = new System.Windows.Forms.MainMenu(this.components);
+			this.@__menu = new System.Windows.Forms.MenuStrip();
 			this.SuspendLayout();
 			// 
 			// MenuDialogHelperForm
@@ -35,7 +35,7 @@
 			this.ControlBox = false;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
-			this.Menu = this.@__menu;
+			this.MainMenuStrip = this.@__menu;
 			this.MinimizeBox = false;
 			this.Name = "MenuDialogHelperForm";
 			this.ShowIcon = false;
@@ -46,6 +46,6 @@
 
 		#endregion
 
-		private System.Windows.Forms.MainMenu __menu;
+		private System.Windows.Forms.MenuStrip __menu;
 	}
 }

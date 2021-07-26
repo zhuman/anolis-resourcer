@@ -28,10 +28,10 @@
 			this.@__infoLbl = new System.Windows.Forms.Label();
 			this.@__split = new System.Windows.Forms.SplitContainer();
 			this.@__simple = new System.Windows.Forms.Button();
-			this.@__cm = new System.Windows.Forms.ContextMenu();
-			this.@__cmEnable = new System.Windows.Forms.MenuItem();
-			this.@__cmDisable = new System.Windows.Forms.MenuItem();
-			this.@__cmInherit = new System.Windows.Forms.MenuItem();
+			this.@__cm = new System.Windows.Forms.ContextMenuStrip();
+			this.@__cmEnable = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__cmDisable = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__cmInherit = new System.Windows.Forms.ToolStripMenuItem();
 			this.@__content.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.@__infoPicture)).BeginInit();
 			this.@__split.Panel1.SuspendLayout();
@@ -107,24 +107,24 @@
 			// 
 			// __cm
 			// 
-			this.@__cm.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__cm.Items.AddRange(new System.Windows.Forms.ToolStripMenuItem[] {
             this.@__cmEnable,
             this.@__cmDisable,
             this.@__cmInherit});
 			// 
 			// __cmEnable
 			// 
-			this.@__cmEnable.Index = 0;
+			this.@__cmEnable.MergeIndex = 0;
 			this.@__cmEnable.Text = "Enable (Explicit)";
 			// 
 			// __cmDisable
 			// 
-			this.@__cmDisable.Index = 1;
+			this.@__cmDisable.MergeIndex = 1;
 			this.@__cmDisable.Text = "Disable (Explicit)";
 			// 
 			// __cmInherit
 			// 
-			this.@__cmInherit.Index = 2;
+			this.@__cmInherit.MergeIndex = 2;
 			this.@__cmInherit.Text = "Inherit Enabled";
 			// 
 			// ModifyPackagePage
@@ -148,9 +148,9 @@
 		private System.Windows.Forms.Label __infoLbl;
 		private System.Windows.Forms.SplitContainer __split;
 		private System.Windows.Forms.Button __simple;
-		private System.Windows.Forms.ContextMenu __cm;
-		private System.Windows.Forms.MenuItem __cmEnable;
-		private System.Windows.Forms.MenuItem __cmDisable;
-		private System.Windows.Forms.MenuItem __cmInherit;
+		private System.Windows.Forms.ContextMenuStrip __cm;
+		private System.Windows.Forms.ToolStripMenuItem __cmEnable;
+		private System.Windows.Forms.ToolStripMenuItem __cmDisable;
+		private System.Windows.Forms.ToolStripMenuItem __cmInherit;
 	}
 }

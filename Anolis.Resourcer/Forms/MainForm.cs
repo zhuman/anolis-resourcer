@@ -8,6 +8,7 @@ using Cult = System.Globalization.CultureInfo;
 using Anolis.Core;
 using Anolis.Resourcer.Controls;
 using ARSettings = Anolis.Resourcer.Settings.ARSettings;
+using System.ComponentModel;
 
 namespace Anolis.Resourcer {
 	
@@ -108,9 +109,9 @@ namespace Anolis.Resourcer {
 			this.__mHelpUpdates     .Click += new EventHandler(__mHelpUpdates_Click);
 			this.__mHelpAbout       .Click += new EventHandler(__mHelpAbout_Click);
 			
-			this.__t.ContextMenu = __c;
+			this.__t.ContextMenuStrip = __c;
 			
-			this.__c.Popup += new EventHandler(__c_Popup);
+			this.__c.Opening += __c_Popup;
 			
 			this.__cToolbar         .Click += new EventHandler(__cToolbar_Click);
 			this.__cToolbarLarge    .Click += new EventHandler(__cToolbarLarge_Click);
@@ -741,10 +742,10 @@ namespace Anolis.Resourcer {
 		
 		private Boolean MenuBarVisible {
 			get {
-				return __menu.MenuItems[0].Visible;
+				return __menu.Items[0].Visible;
 			}
 			set {
-				foreach(MenuItem item in __menu.MenuItems) item.Visible = value;
+				foreach(ToolStripItem item in __menu.Items) item.Visible = value;
 			}
 		}
 		
@@ -796,7 +797,7 @@ namespace Anolis.Resourcer {
 			////////////////////////
 			// MRU
 			
-			__mFileRecent.MenuItems.Clear();
+			__mFileRecent.DropDownItems.Clear();
 			
 			if( _mru.Items.Length == 0 ) {
 				
@@ -808,9 +809,9 @@ namespace Anolis.Resourcer {
 				
 				foreach(String fileName in _mru.Items) {
 					
-					MenuItem mruItem = new MenuItem( fileName );
+					var mruItem = new ToolStripMenuItem( fileName );
 					
-					__mFileRecent.MenuItems.Add( mruItem );
+					__mFileRecent.DropDownItems.Add( mruItem );
 				}
 				
 				
@@ -928,7 +929,7 @@ namespace Anolis.Resourcer {
 			__mViewMenus  .Checked = showMenu;
 			
 			// you can't hide a MainMenu itself, only its root items
-			foreach(MenuItem item in __menu.MenuItems) item.Visible = showMenu;
+			foreach(ToolStripItem item in __menu.Items) item.Visible = showMenu;
 			
 			// TODO: Save this to settings
 		}
@@ -961,7 +962,7 @@ namespace Anolis.Resourcer {
 			
 			Boolean showToolbar = !__mViewToolbar.Checked;
 			
-			if( !showToolbar && !__menu.MenuItems[0].Visible ) return; // don't allow the user to hide both at the same time
+			if( !showToolbar && !__menu.Items[0].Visible ) return; // don't allow the user to hide both at the same time
 			
 			__mViewMenus  .Enabled = showToolbar;
 			__mViewToolbar.Checked = showToolbar;
@@ -1044,16 +1045,16 @@ namespace Anolis.Resourcer {
 	
 	#region ToolbarContext Menu
 		
-		private void __c_Popup(object sender, EventArgs e) {
+		private void __c_Popup(object sender, CancelEventArgs e) {
 			
-			__cMenu   .Checked = __menu.MenuItems[0].Visible; // need to test first child, can't check actual menu's visiblity
+			__cMenu   .Checked = __menu.Items[0].Visible; // need to test first child, can't check actual menu's visiblity
 			__cToolbar.Checked = __t.Visible;
 			
 			__cToolbarSmall.Checked = ARSettings.Default.Toolbar24;
 			__cToolbarLarge.Checked = !__cToolbarSmall.Checked;
 			
 			if( !__t.Visible                 ) __cMenu   .Enabled = false;
-			if( !__menu.MenuItems[0].Visible ) __cToolbar.Enabled = false;
+			if( !__menu.Items[0].Visible ) __cToolbar.Enabled = false;
 			
 		}
 		

@@ -11,27 +11,27 @@ namespace Anolis.Resourcer.TypeViewers {
 			InitializeComponent();
 		}
 		
-		public MainMenu DialogMenu { get { return __menu; } }
+		public MenuStrip DialogMenu { get { return __menu; } }
 		
 		public void LoadMenu(DialogMenu menu) {
 			
-			__menu.MenuItems.Clear();
+			__menu.Items.Clear();
 			
-			LoadMenu( __menu.MenuItems, menu.Root );
+			LoadMenu( __menu.Items, menu.Root );
 			
 		}
 		
-		private void LoadMenu(Menu.MenuItemCollection target, DialogMenuItem item) {
+		private void LoadMenu(ToolStripItemCollection target, DialogMenuItem item) {
 			
 			foreach(DialogMenuItem child in item.Children) {
 				
-				MenuItem i = new MenuItem( child.Text );
+				ToolStripMenuItem i = new ToolStripMenuItem( child.Text );
 				
 				target.Add( i );
 				
 				if(child.Children.Count > 0) {
 					
-					LoadMenu( i.MenuItems, child );
+					LoadMenu( i.DropDownItems, child );
 				}
 			}
 			

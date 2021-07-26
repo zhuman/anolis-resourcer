@@ -21,7 +21,7 @@ namespace Anolis.Core.Source {
 			
 			using(FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write)) {
 				
-				Byte[] emptyDll = Anolis.Core.Resources.Win32EmptyPE;
+				Byte[] emptyDll = Anolis.Resources.Properties.Resources.Win32EmptyPE;
 				
 				fs.Write( emptyDll, 0, emptyDll.Length );
 			}

@@ -28,14 +28,14 @@ namespace Anolis.Resourcer {
 			System.Windows.Forms.ToolStripSeparator @__tSep2;
 			System.Windows.Forms.ToolStripSeparator @__tSrcMruSep1;
 			System.Windows.Forms.ToolStripSeparator @__tSrcSaveSep;
-			System.Windows.Forms.MenuItem @__mFileSep1;
-			System.Windows.Forms.MenuItem @__mFileSep2;
-			System.Windows.Forms.MenuItem @__mViewSep1;
-			System.Windows.Forms.MenuItem @__mActionSep1;
-			System.Windows.Forms.MenuItem @__mEditSep1;
-			System.Windows.Forms.MenuItem @__cSep1;
-			System.Windows.Forms.MenuItem @__mToolsSep2;
-			System.Windows.Forms.MenuItem @__mToolsSep1;
+			System.Windows.Forms.ToolStripSeparator @__mFileSep1;
+			System.Windows.Forms.ToolStripSeparator @__mFileSep2;
+			System.Windows.Forms.ToolStripSeparator @__mViewSep1;
+			System.Windows.Forms.ToolStripSeparator @__mActionSep1;
+			System.Windows.Forms.ToolStripSeparator @__mEditSep1;
+			System.Windows.Forms.ToolStripSeparator @__cSep1;
+			System.Windows.Forms.ToolStripSeparator @__mToolsSep2;
+			System.Windows.Forms.ToolStripSeparator @__mToolsSep1;
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.@__sSep1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.@__sSep2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -77,63 +77,63 @@ namespace Anolis.Resourcer {
 			this.@__resCMDelete = new System.Windows.Forms.ToolStripMenuItem();
 			this.@__resCMCancel = new System.Windows.Forms.ToolStripMenuItem();
 			this.@__dropTarget = new Anolis.Resourcer.Controls.DropTarget();
-			this.@__menu = new System.Windows.Forms.MainMenu(this.components);
-			this.@__mFile = new System.Windows.Forms.MenuItem();
-			this.@__mFileNew = new System.Windows.Forms.MenuItem();
-			this.@__mFileOpen = new System.Windows.Forms.MenuItem();
-			this.@__mFileRecent = new System.Windows.Forms.MenuItem();
-			this.@__mFileClose = new System.Windows.Forms.MenuItem();
-			this.@__mFileSave = new System.Windows.Forms.MenuItem();
-			this.@__mFileBackup = new System.Windows.Forms.MenuItem();
-			this.@__mFileRevert = new System.Windows.Forms.MenuItem();
-			this.@__mFileProperties = new System.Windows.Forms.MenuItem();
-			this.@__mFileExit = new System.Windows.Forms.MenuItem();
-			this.@__mEdit = new System.Windows.Forms.MenuItem();
-			this.@__mEditCut = new System.Windows.Forms.MenuItem();
-			this.@__mEditCopy = new System.Windows.Forms.MenuItem();
-			this.@__mEditPaste = new System.Windows.Forms.MenuItem();
-			this.@__mEditFind = new System.Windows.Forms.MenuItem();
-			this.@__mEditFindNext = new System.Windows.Forms.MenuItem();
-			this.menuItem1 = new System.Windows.Forms.MenuItem();
-			this.@__mEditSelectAll = new System.Windows.Forms.MenuItem();
-			this.@__mView = new System.Windows.Forms.MenuItem();
-			this.@__mViewToolbar = new System.Windows.Forms.MenuItem();
-			this.@__mViewToolbarLarge = new System.Windows.Forms.MenuItem();
-			this.@__mViewToolbarSmall = new System.Windows.Forms.MenuItem();
-			this.@__mViewMenus = new System.Windows.Forms.MenuItem();
-			this.@__mViewEffects = new System.Windows.Forms.MenuItem();
-			this.@__mAction = new System.Windows.Forms.MenuItem();
-			this.@__mActionImport = new System.Windows.Forms.MenuItem();
-			this.@__mActionExport = new System.Windows.Forms.MenuItem();
-			this.@__mActionReplace = new System.Windows.Forms.MenuItem();
-			this.@__mActionDelete = new System.Windows.Forms.MenuItem();
-			this.@__mActionCancel = new System.Windows.Forms.MenuItem();
-			this.@__mTools = new System.Windows.Forms.MenuItem();
-			this.@__mToolsBatch = new System.Windows.Forms.MenuItem();
-			this.@__mToolsPending = new System.Windows.Forms.MenuItem();
-			this.@__mToolsOptions = new System.Windows.Forms.MenuItem();
-			this.@__mHelp = new System.Windows.Forms.MenuItem();
-			this.@__mHelpTopics = new System.Windows.Forms.MenuItem();
-			this.@__mHelpUpdates = new System.Windows.Forms.MenuItem();
-			this.@__mHelpAbout = new System.Windows.Forms.MenuItem();
-			this.@__c = new System.Windows.Forms.ContextMenu();
-			this.@__cToolbar = new System.Windows.Forms.MenuItem();
-			this.@__cToolbarLarge = new System.Windows.Forms.MenuItem();
-			this.@__cToolbarSmall = new System.Windows.Forms.MenuItem();
-			this.@__cMenu = new System.Windows.Forms.MenuItem();
-			this.@__mToolsStringEditor = new System.Windows.Forms.MenuItem();
+			this.@__menu = new System.Windows.Forms.MenuStrip();
+			this.@__mFile = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileNew = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileOpen = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileRecent = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileClose = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileSave = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileBackup = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileRevert = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileProperties = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mFileExit = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mEdit = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mEditCut = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mEditCopy = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mEditPaste = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mEditFind = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mEditFindNext = new System.Windows.Forms.ToolStripMenuItem();
+			this.menuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mEditSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mView = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mViewToolbar = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mViewToolbarLarge = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mViewToolbarSmall = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mViewMenus = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mViewEffects = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mAction = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mActionImport = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mActionExport = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mActionReplace = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mActionDelete = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mActionCancel = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mTools = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mToolsBatch = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mToolsPending = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mToolsOptions = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mHelp = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mHelpTopics = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mHelpUpdates = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__c = new System.Windows.Forms.ContextMenuStrip();
+			this.@__cToolbar = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__cToolbarLarge = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__cToolbarSmall = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__cMenu = new System.Windows.Forms.ToolStripMenuItem();
+			this.@__mToolsStringEditor = new System.Windows.Forms.ToolStripMenuItem();
 			@__tSep1 = new System.Windows.Forms.ToolStripSeparator();
 			@__tSep2 = new System.Windows.Forms.ToolStripSeparator();
 			@__tSrcMruSep1 = new System.Windows.Forms.ToolStripSeparator();
 			@__tSrcSaveSep = new System.Windows.Forms.ToolStripSeparator();
-			@__mFileSep1 = new System.Windows.Forms.MenuItem();
-			@__mFileSep2 = new System.Windows.Forms.MenuItem();
-			@__mViewSep1 = new System.Windows.Forms.MenuItem();
-			@__mActionSep1 = new System.Windows.Forms.MenuItem();
-			@__mEditSep1 = new System.Windows.Forms.MenuItem();
-			@__cSep1 = new System.Windows.Forms.MenuItem();
-			@__mToolsSep2 = new System.Windows.Forms.MenuItem();
-			@__mToolsSep1 = new System.Windows.Forms.MenuItem();
+			@__mFileSep1 = new System.Windows.Forms.ToolStripSeparator();
+			@__mFileSep2 = new System.Windows.Forms.ToolStripSeparator();
+			@__mViewSep1 = new System.Windows.Forms.ToolStripSeparator();
+			@__mActionSep1 = new System.Windows.Forms.ToolStripSeparator();
+			@__mEditSep1 = new System.Windows.Forms.ToolStripSeparator();
+			@__cSep1 = new System.Windows.Forms.ToolStripSeparator();
+			@__mToolsSep2 = new System.Windows.Forms.ToolStripSeparator();
+			@__mToolsSep1 = new System.Windows.Forms.ToolStripSeparator();
 			this.@__split.Panel1.SuspendLayout();
 			this.@__split.SuspendLayout();
 			this.@__nav.SuspendLayout();
@@ -165,32 +165,32 @@ namespace Anolis.Resourcer {
 			// 
 			// __mFileSep1
 			// 
-			@__mFileSep1.Index = 4;
+			@__mFileSep1.MergeIndex = 4;
 			@__mFileSep1.Text = "-";
 			// 
 			// __mFileSep2
 			// 
-			@__mFileSep2.Index = 9;
+			@__mFileSep2.MergeIndex = 9;
 			@__mFileSep2.Text = "-";
 			// 
 			// __mViewSep1
 			// 
-			@__mViewSep1.Index = 3;
+			@__mViewSep1.MergeIndex = 3;
 			@__mViewSep1.Text = "-";
 			// 
 			// __mActionSep1
 			// 
-			@__mActionSep1.Index = 4;
+			@__mActionSep1.MergeIndex = 4;
 			@__mActionSep1.Text = "-";
 			// 
 			// __mEditSep1
 			// 
-			@__mEditSep1.Index = 3;
+			@__mEditSep1.MergeIndex = 3;
 			@__mEditSep1.Text = "-";
 			// 
 			// __cSep1
 			// 
-			@__cSep1.Index = 3;
+			@__cSep1.MergeIndex = 3;
 			@__cSep1.Text = "-";
 			// 
 			// __sSep1
@@ -554,7 +554,7 @@ namespace Anolis.Resourcer {
 			// 
 			// __menu
 			// 
-			this.@__menu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__menu.Items.AddRange(new System.Windows.Forms.ToolStripMenuItem[] {
             this.@__mFile,
             this.@__mEdit,
             this.@__mView,
@@ -564,8 +564,8 @@ namespace Anolis.Resourcer {
 			// 
 			// __mFile
 			// 
-			this.@__mFile.Index = 0;
-			this.@__mFile.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__mFile.MergeIndex = 0;
+			this.@__mFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.@__mFileNew,
             this.@__mFileOpen,
             this.@__mFileRecent,
@@ -581,57 +581,57 @@ namespace Anolis.Resourcer {
 			// 
 			// __mFileNew
 			// 
-			this.@__mFileNew.Index = 0;
-			this.@__mFileNew.Shortcut = System.Windows.Forms.Shortcut.CtrlN;
+			this.@__mFileNew.MergeIndex = 0;
+			this.@__mFileNew.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlN;
 			this.@__mFileNew.Text = "New...";
 			// 
 			// __mFileOpen
 			// 
-			this.@__mFileOpen.Index = 1;
-			this.@__mFileOpen.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
+			this.@__mFileOpen.MergeIndex = 1;
+			this.@__mFileOpen.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlO;
 			this.@__mFileOpen.Text = "Open...";
 			// 
 			// __mFileRecent
 			// 
-			this.@__mFileRecent.Index = 2;
+			this.@__mFileRecent.MergeIndex = 2;
 			this.@__mFileRecent.Text = "Open Recent";
 			// 
 			// __mFileClose
 			// 
-			this.@__mFileClose.Index = 3;
-			this.@__mFileClose.Shortcut = System.Windows.Forms.Shortcut.CtrlW;
+			this.@__mFileClose.MergeIndex = 3;
+			this.@__mFileClose.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlW;
 			this.@__mFileClose.Text = "Close";
 			// 
 			// __mFileSave
 			// 
-			this.@__mFileSave.Index = 5;
-			this.@__mFileSave.Shortcut = System.Windows.Forms.Shortcut.CtrlS;
+			this.@__mFileSave.MergeIndex = 5;
+			this.@__mFileSave.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlS;
 			this.@__mFileSave.Text = "Save...";
 			// 
 			// __mFileBackup
 			// 
-			this.@__mFileBackup.Index = 6;
+			this.@__mFileBackup.MergeIndex = 6;
 			this.@__mFileBackup.Text = "Backup Original...";
 			// 
 			// __mFileRevert
 			// 
-			this.@__mFileRevert.Index = 7;
+			this.@__mFileRevert.MergeIndex = 7;
 			this.@__mFileRevert.Text = "Revert...";
 			// 
 			// __mFileProperties
 			// 
-			this.@__mFileProperties.Index = 8;
+			this.@__mFileProperties.MergeIndex = 8;
 			this.@__mFileProperties.Text = "Properties...";
 			// 
 			// __mFileExit
 			// 
-			this.@__mFileExit.Index = 10;
+			this.@__mFileExit.MergeIndex = 10;
 			this.@__mFileExit.Text = "Exit";
 			// 
 			// __mEdit
 			// 
-			this.@__mEdit.Index = 1;
-			this.@__mEdit.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__mEdit.MergeIndex = 1;
+			this.@__mEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.@__mEditCut,
             this.@__mEditCopy,
             this.@__mEditPaste,
@@ -645,53 +645,53 @@ namespace Anolis.Resourcer {
 			// __mEditCut
 			// 
 			this.@__mEditCut.Enabled = false;
-			this.@__mEditCut.Index = 0;
-			this.@__mEditCut.Shortcut = System.Windows.Forms.Shortcut.CtrlX;
+			this.@__mEditCut.MergeIndex = 0;
+			this.@__mEditCut.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlX;
 			this.@__mEditCut.Text = "Cut";
 			// 
 			// __mEditCopy
 			// 
 			this.@__mEditCopy.Enabled = false;
-			this.@__mEditCopy.Index = 1;
-			this.@__mEditCopy.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
+			this.@__mEditCopy.MergeIndex = 1;
+			this.@__mEditCopy.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlC;
 			this.@__mEditCopy.Text = "Copy";
 			// 
 			// __mEditPaste
 			// 
 			this.@__mEditPaste.Enabled = false;
-			this.@__mEditPaste.Index = 2;
-			this.@__mEditPaste.Shortcut = System.Windows.Forms.Shortcut.CtrlV;
+			this.@__mEditPaste.MergeIndex = 2;
+			this.@__mEditPaste.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlV;
 			this.@__mEditPaste.Text = "Paste";
 			// 
 			// __mEditFind
 			// 
-			this.@__mEditFind.Index = 4;
-			this.@__mEditFind.Shortcut = System.Windows.Forms.Shortcut.CtrlF;
+			this.@__mEditFind.MergeIndex = 4;
+			this.@__mEditFind.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlF;
 			this.@__mEditFind.Text = "Find...";
 			// 
 			// __mEditFindNext
 			// 
 			this.@__mEditFindNext.Enabled = false;
-			this.@__mEditFindNext.Index = 5;
-			this.@__mEditFindNext.Shortcut = System.Windows.Forms.Shortcut.F3;
+			this.@__mEditFindNext.MergeIndex = 5;
+			this.@__mEditFindNext.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.F3;
 			this.@__mEditFindNext.Text = "Find Next";
 			// 
 			// menuItem1
 			// 
-			this.menuItem1.Index = 6;
+			this.menuItem1.MergeIndex = 6;
 			this.menuItem1.Text = "-";
 			// 
 			// __mEditSelectAll
 			// 
 			this.@__mEditSelectAll.Enabled = false;
-			this.@__mEditSelectAll.Index = 7;
-			this.@__mEditSelectAll.Shortcut = System.Windows.Forms.Shortcut.CtrlA;
+			this.@__mEditSelectAll.MergeIndex = 7;
+			this.@__mEditSelectAll.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.CtrlA;
 			this.@__mEditSelectAll.Text = "Select All";
 			// 
 			// __mView
 			// 
-			this.@__mView.Index = 2;
-			this.@__mView.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__mView.MergeIndex = 2;
+			this.@__mView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.@__mViewToolbar,
             this.@__mViewToolbarLarge,
             this.@__mViewToolbarSmall,
@@ -702,35 +702,35 @@ namespace Anolis.Resourcer {
 			// 
 			// __mViewToolbar
 			// 
-			this.@__mViewToolbar.Index = 0;
+			this.@__mViewToolbar.MergeIndex = 0;
 			this.@__mViewToolbar.Text = "Show Toolbar";
 			// 
 			// __mViewToolbarLarge
 			// 
-			this.@__mViewToolbarLarge.Index = 1;
-			this.@__mViewToolbarLarge.RadioCheck = true;
+			this.@__mViewToolbarLarge.MergeIndex = 1;
+			this.@__mViewToolbarLarge.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.@__mViewToolbarLarge.Text = "Large Toolbar Icons";
 			// 
 			// __mViewToolbarSmall
 			// 
-			this.@__mViewToolbarSmall.Index = 2;
-			this.@__mViewToolbarSmall.RadioCheck = true;
+			this.@__mViewToolbarSmall.MergeIndex = 2;
+			this.@__mViewToolbarSmall.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.@__mViewToolbarSmall.Text = "Small Toolbar Icons";
 			// 
 			// __mViewMenus
 			// 
-			this.@__mViewMenus.Index = 4;
+			this.@__mViewMenus.MergeIndex = 4;
 			this.@__mViewMenus.Text = "Show Menu";
 			// 
 			// __mViewEffects
 			// 
-			this.@__mViewEffects.Index = 5;
+			this.@__mViewEffects.MergeIndex = 5;
 			this.@__mViewEffects.Text = "UI Gimmicks";
 			// 
 			// __mAction
 			// 
-			this.@__mAction.Index = 3;
-			this.@__mAction.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__mAction.MergeIndex = 3;
+			this.@__mAction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.@__mActionImport,
             this.@__mActionExport,
             this.@__mActionReplace,
@@ -741,33 +741,33 @@ namespace Anolis.Resourcer {
 			// 
 			// __mActionImport
 			// 
-			this.@__mActionImport.Index = 0;
+			this.@__mActionImport.MergeIndex = 0;
 			this.@__mActionImport.Text = "Import Resource";
 			// 
 			// __mActionExport
 			// 
-			this.@__mActionExport.Index = 1;
+			this.@__mActionExport.MergeIndex = 1;
 			this.@__mActionExport.Text = "Export Resource";
 			// 
 			// __mActionReplace
 			// 
-			this.@__mActionReplace.Index = 2;
+			this.@__mActionReplace.MergeIndex = 2;
 			this.@__mActionReplace.Text = "Replace Resource";
 			// 
 			// __mActionDelete
 			// 
-			this.@__mActionDelete.Index = 3;
+			this.@__mActionDelete.MergeIndex = 3;
 			this.@__mActionDelete.Text = "Delete Resource";
 			// 
 			// __mActionCancel
 			// 
-			this.@__mActionCancel.Index = 5;
+			this.@__mActionCancel.MergeIndex = 5;
 			this.@__mActionCancel.Text = "Cancel Pending Operation";
 			// 
 			// __mTools
 			// 
-			this.@__mTools.Index = 4;
-			this.@__mTools.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__mTools.MergeIndex = 4;
+			this.@__mTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.@__mToolsBatch,
             @__mToolsSep1,
             this.@__mToolsPending,
@@ -778,23 +778,23 @@ namespace Anolis.Resourcer {
 			// 
 			// __mToolsBatch
 			// 
-			this.@__mToolsBatch.Index = 0;
+			this.@__mToolsBatch.MergeIndex = 0;
 			this.@__mToolsBatch.Text = "Batch Export...";
 			// 
 			// __mToolsPending
 			// 
-			this.@__mToolsPending.Index = 2;
+			this.@__mToolsPending.MergeIndex = 2;
 			this.@__mToolsPending.Text = "Pending Operations...";
 			// 
 			// __mToolsOptions
 			// 
-			this.@__mToolsOptions.Index = 5;
+			this.@__mToolsOptions.MergeIndex = 5;
 			this.@__mToolsOptions.Text = "Options...";
 			// 
 			// __mHelp
 			// 
-			this.@__mHelp.Index = 5;
-			this.@__mHelp.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__mHelp.MergeIndex = 5;
+			this.@__mHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripMenuItem[] {
             this.@__mHelpTopics,
             this.@__mHelpUpdates,
             this.@__mHelpAbout});
@@ -802,23 +802,23 @@ namespace Anolis.Resourcer {
 			// 
 			// __mHelpTopics
 			// 
-			this.@__mHelpTopics.Index = 0;
-			this.@__mHelpTopics.Shortcut = System.Windows.Forms.Shortcut.F1;
+			this.@__mHelpTopics.MergeIndex = 0;
+			this.@__mHelpTopics.ShortcutKeys = (System.Windows.Forms.Keys)System.Windows.Forms.Shortcut.F1;
 			this.@__mHelpTopics.Text = "Help Topics";
 			// 
 			// __mHelpUpdates
 			// 
-			this.@__mHelpUpdates.Index = 1;
+			this.@__mHelpUpdates.MergeIndex = 1;
 			this.@__mHelpUpdates.Text = "Check for Updates...";
 			// 
 			// __mHelpAbout
 			// 
-			this.@__mHelpAbout.Index = 2;
+			this.@__mHelpAbout.MergeIndex = 2;
 			this.@__mHelpAbout.Text = "About Resourcer";
 			// 
 			// __c
 			// 
-			this.@__c.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+			this.@__c.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.@__cToolbar,
             this.@__cToolbarLarge,
             this.@__cToolbarSmall,
@@ -827,39 +827,39 @@ namespace Anolis.Resourcer {
 			// 
 			// __cToolbar
 			// 
-			this.@__cToolbar.Index = 0;
+			this.@__cToolbar.MergeIndex = 0;
 			this.@__cToolbar.Text = "Show Toolbar";
 			// 
 			// __cToolbarLarge
 			// 
-			this.@__cToolbarLarge.Index = 1;
-			this.@__cToolbarLarge.RadioCheck = true;
+			this.@__cToolbarLarge.MergeIndex = 1;
+			this.@__cToolbarLarge.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.@__cToolbarLarge.Text = "Large Toolbar Icons";
 			// 
 			// __cToolbarSmall
 			// 
-			this.@__cToolbarSmall.Index = 2;
-			this.@__cToolbarSmall.RadioCheck = true;
+			this.@__cToolbarSmall.MergeIndex = 2;
+			this.@__cToolbarSmall.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.@__cToolbarSmall.Text = "Small Toolbar Icons";
 			// 
 			// __cMenu
 			// 
-			this.@__cMenu.Index = 4;
+			this.@__cMenu.MergeIndex = 4;
 			this.@__cMenu.Text = "Show Menu";
 			// 
 			// __mToolsStringEditor
 			// 
-			this.@__mToolsStringEditor.Index = 3;
+			this.@__mToolsStringEditor.MergeIndex = 3;
 			this.@__mToolsStringEditor.Text = "String Table Editor...";
 			// 
 			// __mToolsSep2
 			// 
-			@__mToolsSep2.Index = 4;
+			@__mToolsSep2.MergeIndex = 4;
 			@__mToolsSep2.Text = "-";
 			// 
 			// __mToolsSep1
 			// 
-			@__mToolsSep1.Index = 1;
+			@__mToolsSep1.MergeIndex = 1;
 			@__mToolsSep1.Text = "-";
 			// 
 			// MainForm
@@ -872,7 +872,7 @@ namespace Anolis.Resourcer {
 			this.Controls.Add(this.@__t);
 			this.Controls.Add(this.@__status);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Menu = this.@__menu;
+			this.MainMenuStrip = this.@__menu;
 			this.Name = "MainForm";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.Text = "Anolis Resourcer";
@@ -932,52 +932,52 @@ namespace Anolis.Resourcer {
 		private System.Windows.Forms.ToolStripSeparator __tSrcMruSep2;
 		private System.Windows.Forms.ToolStripMenuItem __tSrcBatch;
 		private System.Windows.Forms.ToolStripMenuItem __tSrcNew;
-		private System.Windows.Forms.MainMenu __menu;
-		private System.Windows.Forms.MenuItem __mFile;
-		private System.Windows.Forms.MenuItem __mFileNew;
-		private System.Windows.Forms.MenuItem __mFileOpen;
-		private System.Windows.Forms.MenuItem __mFileRecent;
-		private System.Windows.Forms.MenuItem __mFileSave;
-		private System.Windows.Forms.MenuItem __mFileBackup;
-		private System.Windows.Forms.MenuItem __mFileExit;
-		private System.Windows.Forms.MenuItem __mView;
-		private System.Windows.Forms.MenuItem __mAction;
-		private System.Windows.Forms.MenuItem __mActionImport;
-		private System.Windows.Forms.MenuItem __mActionExport;
-		private System.Windows.Forms.MenuItem __mActionReplace;
-		private System.Windows.Forms.MenuItem __mActionDelete;
-		private System.Windows.Forms.MenuItem __mActionCancel;
-		private System.Windows.Forms.MenuItem __mFileRevert;
-		private System.Windows.Forms.MenuItem __mViewToolbarLarge;
-		private System.Windows.Forms.MenuItem __mViewToolbarSmall;
-		private System.Windows.Forms.MenuItem __mViewEffects;
-		private System.Windows.Forms.MenuItem __mTools;
-		private System.Windows.Forms.MenuItem __mEdit;
-		private System.Windows.Forms.MenuItem __mViewMenus;
-		private System.Windows.Forms.MenuItem __mToolsBatch;
-		private System.Windows.Forms.MenuItem __mToolsOptions;
-		private System.Windows.Forms.MenuItem __mEditCut;
-		private System.Windows.Forms.MenuItem __mEditCopy;
-		private System.Windows.Forms.MenuItem __mEditPaste;
-		private System.Windows.Forms.MenuItem __mEditSelectAll;
-		private System.Windows.Forms.MenuItem __mHelp;
-		private System.Windows.Forms.MenuItem __mHelpTopics;
-		private System.Windows.Forms.MenuItem __mHelpUpdates;
-		private System.Windows.Forms.MenuItem __mHelpAbout;
-		private System.Windows.Forms.MenuItem __mViewToolbar;
-		private System.Windows.Forms.MenuItem __mFileClose;
-		private System.Windows.Forms.MenuItem __mToolsPending;
-		private System.Windows.Forms.ContextMenu __c;
-		private System.Windows.Forms.MenuItem __cToolbar;
-		private System.Windows.Forms.MenuItem __cToolbarLarge;
-		private System.Windows.Forms.MenuItem __cToolbarSmall;
-		private System.Windows.Forms.MenuItem __cMenu;
-		private System.Windows.Forms.MenuItem __mEditFind;
-		private System.Windows.Forms.MenuItem __mEditFindNext;
-		private System.Windows.Forms.MenuItem menuItem1;
+		private System.Windows.Forms.MenuStrip __menu;
+		private System.Windows.Forms.ToolStripMenuItem __mFile;
+		private System.Windows.Forms.ToolStripMenuItem __mFileNew;
+		private System.Windows.Forms.ToolStripMenuItem __mFileOpen;
+		private System.Windows.Forms.ToolStripMenuItem __mFileRecent;
+		private System.Windows.Forms.ToolStripMenuItem __mFileSave;
+		private System.Windows.Forms.ToolStripMenuItem __mFileBackup;
+		private System.Windows.Forms.ToolStripMenuItem __mFileExit;
+		private System.Windows.Forms.ToolStripMenuItem __mView;
+		private System.Windows.Forms.ToolStripMenuItem __mAction;
+		private System.Windows.Forms.ToolStripMenuItem __mActionImport;
+		private System.Windows.Forms.ToolStripMenuItem __mActionExport;
+		private System.Windows.Forms.ToolStripMenuItem __mActionReplace;
+		private System.Windows.Forms.ToolStripMenuItem __mActionDelete;
+		private System.Windows.Forms.ToolStripMenuItem __mActionCancel;
+		private System.Windows.Forms.ToolStripMenuItem __mFileRevert;
+		private System.Windows.Forms.ToolStripMenuItem __mViewToolbarLarge;
+		private System.Windows.Forms.ToolStripMenuItem __mViewToolbarSmall;
+		private System.Windows.Forms.ToolStripMenuItem __mViewEffects;
+		private System.Windows.Forms.ToolStripMenuItem __mTools;
+		private System.Windows.Forms.ToolStripMenuItem __mEdit;
+		private System.Windows.Forms.ToolStripMenuItem __mViewMenus;
+		private System.Windows.Forms.ToolStripMenuItem __mToolsBatch;
+		private System.Windows.Forms.ToolStripMenuItem __mToolsOptions;
+		private System.Windows.Forms.ToolStripMenuItem __mEditCut;
+		private System.Windows.Forms.ToolStripMenuItem __mEditCopy;
+		private System.Windows.Forms.ToolStripMenuItem __mEditPaste;
+		private System.Windows.Forms.ToolStripMenuItem __mEditSelectAll;
+		private System.Windows.Forms.ToolStripMenuItem __mHelp;
+		private System.Windows.Forms.ToolStripMenuItem __mHelpTopics;
+		private System.Windows.Forms.ToolStripMenuItem __mHelpUpdates;
+		private System.Windows.Forms.ToolStripMenuItem __mHelpAbout;
+		private System.Windows.Forms.ToolStripMenuItem __mViewToolbar;
+		private System.Windows.Forms.ToolStripMenuItem __mFileClose;
+		private System.Windows.Forms.ToolStripMenuItem __mToolsPending;
+		private System.Windows.Forms.ContextMenuStrip __c;
+		private System.Windows.Forms.ToolStripMenuItem __cToolbar;
+		private System.Windows.Forms.ToolStripMenuItem __cToolbarLarge;
+		private System.Windows.Forms.ToolStripMenuItem __cToolbarSmall;
+		private System.Windows.Forms.ToolStripMenuItem __cMenu;
+		private System.Windows.Forms.ToolStripMenuItem __mEditFind;
+		private System.Windows.Forms.ToolStripMenuItem __mEditFindNext;
+		private System.Windows.Forms.ToolStripMenuItem menuItem1;
 		private System.Windows.Forms.ToolStripButton __navNext;
-		private System.Windows.Forms.MenuItem __mFileProperties;
-		private System.Windows.Forms.MenuItem __mToolsStringEditor;
+		private System.Windows.Forms.ToolStripMenuItem __mFileProperties;
+		private System.Windows.Forms.ToolStripMenuItem __mToolsStringEditor;
 	}
 }
 
