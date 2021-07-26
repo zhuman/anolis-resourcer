@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B0A2D95-2D4B-402F-9B3C-127B47C22ACF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anolis.Packager</RootNamespace>
+    <AssemblyName>Anolis.Packager</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <ApplicationIcon>Resources\Package.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ILMerge, Version=2.8.626.0, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_ref\ILMerge\ILMerge.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="W3b.TarLzma, Version=1.0.0.0, Culture=neutral, PublicKeyToken=afbbd1ad3e927857, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_ref\W3b.TarLzma\W3b.TarLzma.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A-Import\ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A-Import\ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B-Define\ConditionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B-Define\ConditionEditor.Designer.cs">
+      <DependentUpon>ConditionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B-Define\DefinitionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B-Define\DefinitionForm.Designer.cs">
+      <DependentUpon>DefinitionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="B-Define\ImageCompositorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B-Define\ImageCompositorForm.Designer.cs">
+      <DependentUpon>ImageCompositorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E-Distro\DistributorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E-Distro\DistributorForm.Designer.cs">
+      <DependentUpon>DistributorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E-Distro\DistributionCreator.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="C-Compress\TarLzmaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="C-Compress\TarLzmaForm.Designer.cs">
+      <DependentUpon>TarLzmaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="D-Optimizer\DuplicateFinder.cs" />
+    <Compile Include="D-Optimizer\OptimizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D-Optimizer\OptimizerForm.Designer.cs">
+      <DependentUpon>OptimizerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="D-Optimizer\PackageOptimizer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="E-Distro\DistributorForm.resx">
+      <DependentUpon>DistributorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C-Compress\TarLzmaForm.resx">
+      <DependentUpon>TarLzmaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\Empty Assembly\Anolis.EmptyAssembly.cs" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="A-Import\ImportForm.resx">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B-Define\ConditionEditor.resx">
+      <DependentUpon>ConditionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B-Define\DefinitionForm.resx">
+      <DependentUpon>DefinitionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B-Define\ImageCompositorForm.resx">
+      <DependentUpon>ImageCompositorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D-Optimizer\OptimizerForm.resx">
+      <DependentUpon>OptimizerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Package.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main\Compress.png" />
+    <None Include="Resources\Main\Create.png" />
+    <None Include="Resources\Main\Distro.png" />
+    <None Include="Resources\Main\IconEdit.png" />
+    <None Include="Resources\Main\Import.png" />
+    <None Include="Resources\Define\TSave.png" />
+    <None Include="Resources\Define\TNew.png" />
+    <None Include="Resources\Define\TOpen.png" />
+    <None Include="Resources\Define\TResourcer.png" />
+    <Content Include="Resources\Define\AddExtra.png" />
+    <Content Include="Resources\Define\AddFile.png" />
+    <Content Include="Resources\Define\AddFileAssoc.png" />
+    <Content Include="Resources\Define\AddGroup.png" />
+    <Content Include="Resources\Define\AddPatch.png" />
+    <Content Include="Resources\Define\AddRemove.png" />
+    <None Include="Resources\Define\TCondition.png" />
+    <Content Include="Resources\Define\TValidate.png" />
+    <Content Include="Resources\Package.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Anolis.Packages\Anolis.Packages.csproj">
+      <Project>{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}</Project>
+      <Name>Anolis.Packages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Anolis.Resources\Anolis.Resources.csproj">
+      <Project>{967BF434-D4F9-41E3-8B82-433987DEB4A6}</Project>
+      <Name>Anolis.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Empty Assembly\out\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

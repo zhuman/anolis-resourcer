@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F94BAA8F-47E1-4A4E-BF8E-073B10611D17}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anolis.TweakUI</RootNamespace>
+    <AssemblyName>Anolis.TweakUI</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileTypes\ColumnHeader2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileTypes\ExtensionEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileTypes\ExtensionEditor.Designer.cs">
+      <DependentUpon>ExtensionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTypes\FileTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTypes\FileTypeForm.Designer.cs">
+      <DependentUpon>FileTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTypes\NativeMethods.cs" />
+    <Compile Include="FileTypes\TypeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileTypes\TypeEditor.Designer.cs">
+      <DependentUpon>TypeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FileTypes\ExtensionEditor.resx">
+      <DependentUpon>ExtensionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTypes\FileTypeForm.resx">
+      <DependentUpon>FileTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTypes\TypeEditor.resx">
+      <DependentUpon>TypeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThumbsDB\ThumbnailForm.resx">
+      <DependentUpon>ThumbnailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThumbsDB\ThumbnailItem.resx">
+      <DependentUpon>ThumbnailItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FileTypes\app.manifest" />
+    <Compile Include="ShellSettings.cs" />
+    <Compile Include="ThumbsDB\ThumbnailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThumbsDB\ThumbnailForm.Designer.cs">
+      <DependentUpon>ThumbnailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThumbsDB\ThumbDBLib\FileObject.cs" />
+    <Compile Include="ThumbsDB\ThumbDBLib\FileObjectCollection.cs" />
+    <Compile Include="ThumbsDB\ThumbDBLib\IBaseStorageWrapper.cs" />
+    <Compile Include="ThumbsDB\ThumbDBLib\Interop.cs" />
+    <Compile Include="ThumbsDB\ThumbDBLib\IStorageWrapper.cs" />
+    <Compile Include="ThumbsDB\ThumbDBLib\ITStorageWrapper.cs" />
+    <Compile Include="ThumbsDB\ThumbDBLib\ThumbDB.cs" />
+    <Compile Include="ThumbsDB\ThumbnailItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThumbsDB\ThumbnailItem.Designer.cs">
+      <DependentUpon>ThumbnailItem.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Anolis.Packages\Anolis.Packages.csproj">
+      <Project>{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}</Project>
+      <Name>Anolis.Packages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Anolis.Resources\Anolis.Resources.csproj">
+      <Project>{967BF434-D4F9-41E3-8B82-433987DEB4A6}</Project>
+      <Name>Anolis.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

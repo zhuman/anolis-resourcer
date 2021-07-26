@@ -1,0 +1,157 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Resources", "Anolis.Resources\Anolis.Resources.csproj", "{967BF434-D4F9-41E3-8B82-433987DEB4A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Resourcer", "Anolis.Resourcer\Anolis.Resourcer.csproj", "{A651602A-6FF5-4DCC-A1FE-4A794F412A36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Console", "Anolis.Console\Anolis.Console.csproj", "{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1AA86BE-FDC7-4B61-827F-8F6C43DE81F1}"
+	ProjectSection(SolutionItems) = preProject
+		Anolis.vsmdi = Anolis.vsmdi
+		_ref\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.dll = _ref\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.dll
+		_ref\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.xml = _ref\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.xml
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Packager", "Anolis.Packager\Anolis.Packager.csproj", "{0B0A2D95-2D4B-402F-9B3C-127B47C22ACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Installer", "Anolis.Installer\Anolis.Installer.csproj", "{ABEA3311-BF34-4961-B2C8-34AFB8EFB43F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.IconEditor", "Anolis.IconEditor\Anolis.IconEditor.csproj", "{8F678A8E-566F-4CB2-B202-20C5156B0BC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Tests", "Anolis.Tests\Anolis.Tests.csproj", "{143593CE-F1E8-4B8C-8823-7FD246059344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Tools.TweakUI", "Anolis.Tools.TweakUI\Anolis.Tools.TweakUI.csproj", "{F94BAA8F-47E1-4A4E-BF8E-073B10611D17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Tools.ImageTools", "Anolis.Tools.ImageTools\Anolis.Tools.ImageTools.csproj", "{D91DE542-5202-4334-BC23-19DE4F36AB95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Tools.PEInfo", "Anolis.Tools.PEInfo\Anolis.Tools.PEInfo.csproj", "{FF3A57DA-CB94-4163-9969-01C7FFDFB221}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anolis.Packages", "Anolis.Packages\Anolis.Packages.csproj", "{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/TFS03
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Anolis.Tools.ImageTools\\Anolis.Tools.ImageTools.csproj
+		SccProjectName1 = Anolis.Tools.ImageTools
+		SccLocalPath1 = Anolis.Tools.ImageTools
+		SccProjectUniqueName2 = Anolis.Console\\Anolis.Console.csproj
+		SccProjectName2 = Anolis.Console
+		SccLocalPath2 = Anolis.Console
+		SccProjectUniqueName3 = Anolis.IconEditor\\Anolis.IconEditor.csproj
+		SccProjectName3 = Anolis.IconEditor
+		SccLocalPath3 = Anolis.IconEditor
+		SccProjectUniqueName4 = Anolis.Installer\\Anolis.Installer.csproj
+		SccProjectName4 = Anolis.Installer
+		SccLocalPath4 = Anolis.Installer
+		SccProjectUniqueName5 = Anolis.Packager\\Anolis.Packager.csproj
+		SccProjectName5 = Anolis.Packager
+		SccLocalPath5 = Anolis.Packager
+		SccProjectUniqueName6 = Anolis.Resourcer\\Anolis.Resourcer.csproj
+		SccProjectName6 = Anolis.Resourcer
+		SccLocalPath6 = Anolis.Resourcer
+		SccProjectUniqueName7 = Anolis.Tests\\Anolis.Tests.csproj
+		SccProjectName7 = Anolis.Tests
+		SccLocalPath7 = Anolis.Tests
+		SccProjectUniqueName8 = Anolis.Tools.TweakUI\\Anolis.Tools.TweakUI.csproj
+		SccProjectName8 = Anolis.Tools.TweakUI
+		SccLocalPath8 = Anolis.Tools.TweakUI
+		SccProjectUniqueName9 = Anolis.Tools.PEInfo\\Anolis.Tools.PEInfo.csproj
+		SccProjectName9 = Anolis.Tools.PEInfo
+		SccLocalPath9 = Anolis.Tools.PEInfo
+		SccProjectUniqueName10 = Anolis.Core.Packages\\Anolis.Packages.csproj
+		SccProjectName10 = Anolis.Core.Packages
+		SccLocalPath10 = Anolis.Core.Packages
+		SccProjectUniqueName11 = Anolis.Core\\Anolis.Resources.csproj
+		SccProjectName11 = Anolis.Core
+		SccLocalPath11 = Anolis.Core
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Anolis.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{967BF434-D4F9-41E3-8B82-433987DEB4A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967BF434-D4F9-41E3-8B82-433987DEB4A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967BF434-D4F9-41E3-8B82-433987DEB4A6}.Debug|x86.ActiveCfg = Debug|x86
+		{967BF434-D4F9-41E3-8B82-433987DEB4A6}.Debug|x86.Build.0 = Debug|x86
+		{967BF434-D4F9-41E3-8B82-433987DEB4A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967BF434-D4F9-41E3-8B82-433987DEB4A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967BF434-D4F9-41E3-8B82-433987DEB4A6}.Release|x86.ActiveCfg = Release|x86
+		{967BF434-D4F9-41E3-8B82-433987DEB4A6}.Release|x86.Build.0 = Release|x86
+		{A651602A-6FF5-4DCC-A1FE-4A794F412A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A651602A-6FF5-4DCC-A1FE-4A794F412A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A651602A-6FF5-4DCC-A1FE-4A794F412A36}.Debug|x86.ActiveCfg = Debug|x86
+		{A651602A-6FF5-4DCC-A1FE-4A794F412A36}.Debug|x86.Build.0 = Debug|x86
+		{A651602A-6FF5-4DCC-A1FE-4A794F412A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A651602A-6FF5-4DCC-A1FE-4A794F412A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A651602A-6FF5-4DCC-A1FE-4A794F412A36}.Release|x86.ActiveCfg = Release|x86
+		{A651602A-6FF5-4DCC-A1FE-4A794F412A36}.Release|x86.Build.0 = Release|x86
+		{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}.Debug|x86.ActiveCfg = Debug|x86
+		{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}.Debug|x86.Build.0 = Debug|x86
+		{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}.Release|x86.ActiveCfg = Release|x86
+		{53D9E79D-1B46-4E69-B8F1-E8EC3A50B0B7}.Release|x86.Build.0 = Release|x86
+		{0B0A2D95-2D4B-402F-9B3C-127B47C22ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0A2D95-2D4B-402F-9B3C-127B47C22ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0A2D95-2D4B-402F-9B3C-127B47C22ACF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B0A2D95-2D4B-402F-9B3C-127B47C22ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0A2D95-2D4B-402F-9B3C-127B47C22ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B0A2D95-2D4B-402F-9B3C-127B47C22ACF}.Release|x86.ActiveCfg = Release|Any CPU
+		{ABEA3311-BF34-4961-B2C8-34AFB8EFB43F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEA3311-BF34-4961-B2C8-34AFB8EFB43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEA3311-BF34-4961-B2C8-34AFB8EFB43F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ABEA3311-BF34-4961-B2C8-34AFB8EFB43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEA3311-BF34-4961-B2C8-34AFB8EFB43F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEA3311-BF34-4961-B2C8-34AFB8EFB43F}.Release|x86.ActiveCfg = Release|Any CPU
+		{8F678A8E-566F-4CB2-B202-20C5156B0BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F678A8E-566F-4CB2-B202-20C5156B0BC4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8F678A8E-566F-4CB2-B202-20C5156B0BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F678A8E-566F-4CB2-B202-20C5156B0BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F678A8E-566F-4CB2-B202-20C5156B0BC4}.Release|x86.ActiveCfg = Release|Any CPU
+		{143593CE-F1E8-4B8C-8823-7FD246059344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143593CE-F1E8-4B8C-8823-7FD246059344}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{143593CE-F1E8-4B8C-8823-7FD246059344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143593CE-F1E8-4B8C-8823-7FD246059344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143593CE-F1E8-4B8C-8823-7FD246059344}.Release|x86.ActiveCfg = Release|Any CPU
+		{F94BAA8F-47E1-4A4E-BF8E-073B10611D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94BAA8F-47E1-4A4E-BF8E-073B10611D17}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F94BAA8F-47E1-4A4E-BF8E-073B10611D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94BAA8F-47E1-4A4E-BF8E-073B10611D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94BAA8F-47E1-4A4E-BF8E-073B10611D17}.Release|x86.ActiveCfg = Release|Any CPU
+		{D91DE542-5202-4334-BC23-19DE4F36AB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91DE542-5202-4334-BC23-19DE4F36AB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91DE542-5202-4334-BC23-19DE4F36AB95}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D91DE542-5202-4334-BC23-19DE4F36AB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91DE542-5202-4334-BC23-19DE4F36AB95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91DE542-5202-4334-BC23-19DE4F36AB95}.Release|x86.ActiveCfg = Release|Any CPU
+		{FF3A57DA-CB94-4163-9969-01C7FFDFB221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3A57DA-CB94-4163-9969-01C7FFDFB221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3A57DA-CB94-4163-9969-01C7FFDFB221}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FF3A57DA-CB94-4163-9969-01C7FFDFB221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3A57DA-CB94-4163-9969-01C7FFDFB221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF3A57DA-CB94-4163-9969-01C7FFDFB221}.Release|x86.ActiveCfg = Release|Any CPU
+		{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

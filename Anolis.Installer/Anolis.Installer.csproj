@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABEA3311-BF34-4961-B2C8-34AFB8EFB43F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anolis.Installer</RootNamespace>
+    <AssemblyName>Anolis.Installer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>Package.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="W3b.TarLzma, Version=1.0.0.0, Culture=neutral, PublicKeyToken=afbbd1ad3e927857, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_ref\W3b.TarLzma\W3b.TarLzma.dll</HintPath>
+    </Reference>
+    <Reference Include="W3b.Wizards, Version=1.0.3464.28051, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_ref\W3b.Wizards\W3b.Wizards.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Extensions.cs" />
+    <Compile Include="Classes\FeedbackSender.cs" />
+    <Compile Include="Classes\InstallationInfo.cs" />
+    <Compile Include="Classes\InstallerResources.cs" />
+    <Compile Include="Pages\0-BaseExteriorPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\A-Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\A-Welcome.Designer.cs">
+      <DependentUpon>A-Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\B-MainAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\B-MainAction.Designer.cs">
+      <DependentUpon>B-MainAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\0-BaseInteriorPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\C-D-ReleaseNotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\C-D-ReleaseNotes.Designer.cs">
+      <DependentUpon>C-D-ReleaseNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\C-G-Installing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\C-G-Installing.Designer.cs">
+      <DependentUpon>C-G-Installing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\C-C-UpdatePackage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\C-C-UpdatePackage.Designer.cs">
+      <DependentUpon>C-C-UpdatePackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\G2-SendFeedbackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\G2-SendFeedbackForm.Designer.cs">
+      <DependentUpon>G2-SendFeedbackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\D-A-Destination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\D-A-Destination.Designer.cs">
+      <DependentUpon>D-A-Destination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\D-B-Downloading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\D-B-Downloading.Designer.cs">
+      <DependentUpon>D-B-Downloading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\C-A-SelectPackage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\C-A-SelectPackage.Designer.cs">
+      <DependentUpon>C-A-SelectPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\C-F-InstallationOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\C-F-InstallationOptions.Designer.cs">
+      <DependentUpon>C-F-InstallationOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\C-E2-ModifyPackage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\C-E2-ModifyPackage.Designer.cs">
+      <DependentUpon>C-E2-ModifyPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\C-B-Extracting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\C-B-Extracting.Designer.cs">
+      <DependentUpon>C-B-Extracting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\E-A-SelectBackup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\E-A-SelectBackup.Designer.cs">
+      <DependentUpon>E-A-SelectBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\F-Finished.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\F-Finished.designer.cs">
+      <DependentUpon>F-Finished.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\C-F2-InstallationOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\C-F2-InstallationOptionsForm.Designer.cs">
+      <DependentUpon>C-F2-InstallationOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LanguageComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\LocalizerHelper.cs" />
+    <Compile Include="Pages\G-WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\G-WaitForm.Designer.cs">
+      <DependentUpon>G-WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\C-E1-Selector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\C-E1-Selector.Designer.cs">
+      <DependentUpon>C-E1-Selector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Pages\0-BaseInteriorPage.resx">
+      <DependentUpon>0-BaseInteriorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\A-Welcome.resx">
+      <DependentUpon>A-Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\B-MainAction.resx">
+      <DependentUpon>B-MainAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\C-D-ReleaseNotes.resx">
+      <DependentUpon>C-D-ReleaseNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\C-G-Installing.resx">
+      <DependentUpon>C-G-Installing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\C-C-UpdatePackage.resx">
+      <DependentUpon>C-C-UpdatePackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\D-A-Destination.resx">
+      <DependentUpon>D-A-Destination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\D-B-Downloading.resx">
+      <DependentUpon>D-B-Downloading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\C-A-SelectPackage.resx">
+      <DependentUpon>C-A-SelectPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\C-F-InstallationOptions.resx">
+      <DependentUpon>C-F-InstallationOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\C-E2-ModifyPackage.resx">
+      <DependentUpon>C-E2-ModifyPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\C-B-Extracting.resx">
+      <DependentUpon>C-B-Extracting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\E-A-SelectBackup.resx">
+      <DependentUpon>E-A-SelectBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\F-Finished.resx">
+      <DependentUpon>F-Finished.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\G-WaitForm.resx">
+      <DependentUpon>G-WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\C-E1-Selector.resx">
+      <DependentUpon>C-E1-Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\Resx\ar.resx" />
+    <None Include="Resources\Resx\cy.resx" />
+    <None Include="Resources\Resx\da.resx" />
+    <None Include="Resources\Resx\de.resx" />
+    <EmbeddedResource Include="Resources\Resx\en.resx" />
+    <None Include="Resources\Resx\es.resx" />
+    <None Include="Resources\Resx\fa.resx" />
+    <None Include="Resources\Resx\fr.resx" />
+    <None Include="Resources\Resx\gr.resx" />
+    <None Include="Resources\Resx\it.resx" />
+    <None Include="Resources\Resx\nl.resx" />
+    <None Include="Resources\Resx\pl.resx" />
+    <None Include="Resources\Resx\pt.resx" />
+    <None Include="Resources\Resx\ru.resx" />
+    <None Include="Resources\Resx\sv.resx" />
+    <None Include="Resources\Resx\th.resx" />
+    <None Include="Resources\Resx\zh.resx" />
+    <None Include="Resources\Resx\zh2.resx" />
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Anolis.Packages\Anolis.Packages.csproj">
+      <Project>{2D62D22E-9DD3-4F42-818D-7F63A04E2AF6}</Project>
+      <Name>Anolis.Packages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Anolis.Resources\Anolis.Resources.csproj">
+      <Project>{967BF434-D4F9-41E3-8B82-433987DEB4A6}</Project>
+      <Name>Anolis.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Package.ico" />
+    <None Include="EULA.rtf" />
+    <EmbeddedResource Include="Pages\C-F2-InstallationOptionsForm.resx">
+      <DependentUpon>C-F2-InstallationOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ILMerge Release.cmd" />
+    <None Include="Resources\Compressed\ar.resources.gz" />
+    <None Include="Resources\Compressed\cy.resources.gz" />
+    <None Include="Resources\Compressed\da.resources.gz" />
+    <None Include="Resources\Compressed\de.resources.gz" />
+    <None Include="Resources\Compressed\es.resources.gz" />
+    <None Include="Resources\Compressed\fa.resources.gz" />
+    <None Include="Resources\Compressed\fr.resources.gz" />
+    <None Include="Resources\Compressed\gr.resources.gz" />
+    <None Include="Resources\Compressed\it.resources.gz" />
+    <None Include="Resources\Compressed\nl.resources.gz" />
+    <None Include="Resources\Compressed\pl.resources.gz" />
+    <None Include="Resources\Compressed\pt.resources.gz" />
+    <None Include="Resources\Compressed\ru.resources.gz" />
+    <None Include="Resources\Compressed\sv.resources.gz" />
+    <None Include="Resources\Compressed\th.resources.gz" />
+    <None Include="Resources\Compressed\zh.resources.gz" />
+    <None Include="Resources\Compressed\zh2.resources.gz" />
+    <None Include="Resources\Flags\en.png" />
+    <None Include="Resources\Flags\de.png" />
+    <None Include="Resources\Flags\es.png" />
+    <None Include="Resources\Flags\nl.png" />
+    <None Include="Resources\Flags\cy.png" />
+    <Content Include="Resources\Flags\ar.png" />
+    <None Include="Resources\Flags\br.png" />
+    <Content Include="Resources\Flags\dk.png" />
+    <Content Include="Resources\Flags\fa.png" />
+    <None Include="Resources\Flags\fr.png" />
+    <None Include="Resources\Flags\gr.png" />
+    <Content Include="Resources\Flags\it.png" />
+    <Content Include="Resources\Flags\pl.png" />
+    <Content Include="Resources\Flags\ru.png" />
+    <None Include="Resources\Flags\th.png" />
+    <None Include="Resources\Flags\se.png" />
+    <None Include="Resources\Resx\GZip\en.resources.gz" />
+    <EmbeddedResource Include="Pages\G2-SendFeedbackForm.resx">
+      <DependentUpon>G2-SendFeedbackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\GZip\ar.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\cy.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\da.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\de.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\es.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\fa.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\fr.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\gr.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\it.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\nl.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\pl.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\pt.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\ru.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\sv.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\th.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\zh.resources.gz" />
+    <EmbeddedResource Include="Resources\Resx\GZip\zh2.resources.gz" />
+    <Content Include="Resources\Flags\zh.png" />
+    <Content Include="Resources\Package.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

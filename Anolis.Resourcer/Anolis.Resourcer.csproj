@@ -1,0 +1,496 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A651602A-6FF5-4DCC-A1FE-4A794F412A36}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anolis.Resourcer</RootNamespace>
+    <AssemblyName>Anolis.Resourcer</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationIcon>Resources\MainIcon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Anolis.snk</AssemblyOriginatorKeyFile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Be.Windows.Forms.HexBox, Version=1.3.0.40004, Culture=neutral, PublicKeyToken=e0e5adf0ebc99863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_ref\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandLine\BatchProcessor.cs" />
+    <Compile Include="CommandLine\BatchReport.cs" />
+    <Compile Include="CommandLine\CommandLineParser.cs" />
+    <Compile Include="CommandLine\Processor.cs" />
+    <Compile Include="Controls\AnimationControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DropTarget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DropTarget.Designer.cs">
+      <DependentUpon>DropTarget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DebuggerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DebuggerForm.Designer.cs">
+      <DependentUpon>DebuggerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FactoryOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FactoryOptionsForm.Designer.cs">
+      <DependentUpon>FactoryOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FindForm.Designer.cs">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Cultures.cs" />
+    <Compile Include="Forms\AddResourceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddResourceForm.Designer.cs">
+      <DependentUpon>AddResourceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolStripImprovedSystemRenderer.cs">
+    </Compile>
+    <Compile Include="Controls\TreeViewTwo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZoomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZoomPictureBox.Designer.cs">
+      <DependentUpon>ZoomPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ZoomPictureBoxDesigner.cs" />
+    <Compile Include="Controls\ZoomPictureBoxWrapper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ZoomPictureBoxWrapper.Designer.cs">
+      <DependentUpon>ZoomPictureBoxWrapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BatchProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BatchProcessForm.Designer.cs">
+      <DependentUpon>BatchProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.Partial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PendingOperationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PendingOperationsForm.Designer.cs">
+      <DependentUpon>PendingOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReplaceResourceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReplaceResourceForm.Designer.cs">
+      <DependentUpon>ReplaceResourceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\DropTarget.resx">
+      <DependentUpon>DropTarget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ZoomPictureBoxWrapper.resx">
+      <DependentUpon>ZoomPictureBoxWrapper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddResourceForm.resx">
+      <DependentUpon>AddResourceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BatchProcessForm.resx">
+      <DependentUpon>BatchProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DebuggerForm.resx">
+      <DependentUpon>DebuggerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FactoryOptionsForm.resx">
+      <DependentUpon>FactoryOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindForm.resx">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PendingOperationsForm.resx">
+      <DependentUpon>PendingOperationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReplaceResourceForm.resx">
+      <DependentUpon>ReplaceResourceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\AnimationViewer.resx">
+      <DependentUpon>AnimationViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\MenuDialogHelperForm.resx">
+      <DependentUpon>MenuDialogHelperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\MenuDialogViewer.resx">
+      <DependentUpon>MenuDialogViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\StringTableViewer.resx">
+      <DependentUpon>StringTableViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\SgmlViewer.resx">
+      <DependentUpon>SgmlViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\IconCursorViewer.resx">
+      <DependentUpon>IconCursorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="TypeViewers\MediaViewer.resx">
+      <DependentUpon>MediaViewer.cs</DependentUpon>
+    </None>
+    <EmbeddedResource Include="TypeViewers\ImageViewer.resx">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\RawViewer.resx">
+      <DependentUpon>RawViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\TextViewer.resx">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ResourceDataView.resx">
+      <DependentUpon>ResourceDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ResourceListView.resx">
+      <DependentUpon>ResourceListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeViewers\VersionViewer.resx">
+      <DependentUpon>VersionViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings\FileAssociationManager.cs" />
+    <Compile Include="Settings\Mru.cs" />
+    <Compile Include="Settings\Settings.cs" />
+    <Compile Include="Settings\ARSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ARSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\AnimationViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\AnimationViewer.Designer.cs">
+      <DependentUpon>AnimationViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\MenuDialogHelperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\MenuDialogHelperForm.Designer.cs">
+      <DependentUpon>MenuDialogHelperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\MenuDialogViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\MenuDialogViewer.Designer.cs">
+      <DependentUpon>MenuDialogViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\StringTableViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\StringTableViewer.Designer.cs">
+      <DependentUpon>StringTableViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\SgmlViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\SgmlViewer.Designer.cs">
+      <DependentUpon>SgmlViewer.cs</DependentUpon>
+    </Compile>
+    <None Include="TypeViewers\MediaViewer.cs">
+      <SubType>UserControl</SubType>
+    </None>
+    <None Include="TypeViewers\MediaViewer.Designer.cs">
+      <DependentUpon>MediaViewer.cs</DependentUpon>
+    </None>
+    <Compile Include="TypeViewers\TextViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\TextViewer.Designer.cs">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\IconCursorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\IconCursorViewer.Designer.cs">
+      <DependentUpon>IconCursorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\RawViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\RawViewer.Designer.cs">
+      <DependentUpon>RawViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\TypeViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\ImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\ImageViewer.Designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResourceDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ResourceDataView.Designer.cs">
+      <DependentUpon>ResourceDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResourceListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ResourceListView.Designer.cs">
+      <DependentUpon>ResourceListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeViewers\VersionViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeViewers\VersionViewer.Designer.cs">
+      <DependentUpon>VersionViewer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Anolis.Resources\Anolis.Resources.csproj">
+      <Project>{967BF434-D4F9-41E3-8B82-433987DEB4A6}</Project>
+      <Name>Anolis.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Settings\ARSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ARSettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Anolis.snk" />
+    <None Include="app.manifest" />
+    <None Include="Controls\Empty.png" />
+    <Content Include="MainIcon.ico" />
+    <None Include="Resources\DirectoryViewer\Zoomable.png" />
+    <None Include="Resources\AddResource\SortByLCID.png" />
+    <None Include="Resources\AddResource\SortByName.png" />
+    <None Include="Resources\Dialogs\Run.png" />
+    <None Include="Resources\anolisLogo50.png" />
+    <Content Include="Resources\ImageViewer\Center.png" />
+    <None Include="Resources\ImageViewer\Empty.png" />
+    <None Include="Resources\ImageViewer\Information.png" />
+    <Content Include="Resources\ImageViewer\Interpolation.png" />
+    <Content Include="Resources\ImageViewer\TransparentBg.png" />
+    <Content Include="Resources\ImageViewer\Zoom100.png" />
+    <Content Include="Resources\ImageViewer\ZoomIn.png" />
+    <Content Include="Resources\ImageViewer\ZoomOut.png" />
+    <None Include="Resources\ListView\Icon16.png" />
+    <None Include="Resources\ListView\Icon32.png" />
+    <None Include="Resources\ListView\Icon96.png" />
+    <None Include="Resources\ListView\NavUpUp.png" />
+    <None Include="Resources\ListView\NavBackOver.png" />
+    <None Include="Resources\ListView\NavBackUp.png" />
+    <None Include="Resources\ListView\NavUpOver.png" />
+    <None Include="Resources\ListView\Details.png" />
+    <None Include="Resources\ListView\NavNext.png" />
+    <Content Include="Resources\MainIcon.ico" />
+    <Content Include="Resources\ResourceTypes\Accelerator16.png" />
+    <Content Include="Resources\ResourceTypes\Accelerator32.png" />
+    <Content Include="Resources\ResourceTypes\Binary16.png" />
+    <Content Include="Resources\ResourceTypes\Binary32.png" />
+    <Content Include="Resources\ResourceTypes\Bitmap16.png" />
+    <Content Include="Resources\ResourceTypes\Bitmap32.png" />
+    <Content Include="Resources\ResourceTypes\ColorTable16.png" />
+    <Content Include="Resources\ResourceTypes\ColorTable32.png" />
+    <Content Include="Resources\ResourceTypes\Cursor16.png" />
+    <Content Include="Resources\ResourceTypes\Cursor32.png" />
+    <Content Include="Resources\ResourceTypes\Dialog16.png" />
+    <Content Include="Resources\ResourceTypes\Dialog32.png" />
+    <Content Include="Resources\ResourceTypes\File16.png" />
+    <Content Include="Resources\ResourceTypes\File32.png" />
+    <Content Include="Resources\ResourceTypes\Html16.png" />
+    <Content Include="Resources\ResourceTypes\Html32.png" />
+    <Content Include="Resources\ResourceTypes\Icon16.png" />
+    <Content Include="Resources\ResourceTypes\Icon32.png" />
+    <Content Include="Resources\ResourceTypes\Menu16.png" />
+    <Content Include="Resources\ResourceTypes\Menu32.png" />
+    <Content Include="Resources\ResourceTypes\StringTable16.png" />
+    <Content Include="Resources\ResourceTypes\StringTable32.png" />
+    <Content Include="Resources\ResourceTypes\Toolbar16.png" />
+    <Content Include="Resources\ResourceTypes\Toolbar32.png" />
+    <Content Include="Resources\ResourceTypes\Version16.png" />
+    <Content Include="Resources\ResourceTypes\Version32.png" />
+    <Content Include="Resources\ResourceTypes\Xml16.png" />
+    <Content Include="Resources\ResourceTypes\Xml32.png" />
+    <Content Include="Resources\ResTree\Delete.png" />
+    <None Include="Resources\ResTree\Update.png" />
+    <None Include="Resources\ResTree\Import.png" />
+    <Content Include="Resources\TextViewer\BOM.png" />
+    <Content Include="Resources\TextViewer\Endian.png" />
+    <Content Include="Resources\TextViewer\Font.png" />
+    <Content Include="Resources\TextViewer\WordWrap.png" />
+    <Content Include="Resources\Toolbar\AeroBackground.png" />
+    <Content Include="_help\ChangeList.txt" />
+    <None Include="_help\Help.htm" />
+    <None Include="Resources\Toolbar\ResCan.png" />
+    <None Include="Resources\Toolbar\ResCan24.png" />
+    <None Include="Resources\Toolbar\GenOpt24.png" />
+    <None Include="Resources\Toolbar\GenOpt.png" />
+    <None Include="Resources\Toolbar\ResRep24.png" />
+    <None Include="Resources\Toolbar\ResExt24.png" />
+    <None Include="Resources\Toolbar\SrcSave24.png" />
+    <None Include="Resources\Toolbar\SrcRev24.png" />
+    <None Include="Resources\Toolbar\SrcOpen24.png" />
+    <None Include="Resources\Toolbar\ResDel24.png" />
+    <None Include="Resources\Toolbar\ResAdd24.png" />
+    <None Include="Resources\Toolbar\SrcSave.png" />
+    <None Include="Resources\Toolbar\SrcRev.png" />
+    <None Include="Resources\Toolbar\SrcOpen.png" />
+    <None Include="Resources\Toolbar\ResRep.png" />
+    <None Include="Resources\Toolbar\ResExt.png" />
+    <None Include="Resources\Toolbar\ResDel.png" />
+    <None Include="Resources\Toolbar\ResAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
